@@ -54,7 +54,8 @@ Hurray !! Access the application on `http://<ip-address>:8010`
 ```
 apt install unzip
 adduser sonarqube
-wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip     (if this doesn't work - give  cd /home/sonarqube
+and then give wget cmd)
 unzip *
 chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
 chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424

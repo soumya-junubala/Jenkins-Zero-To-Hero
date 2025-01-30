@@ -92,6 +92,33 @@ Jenkins Installation is Successful. You can now starting using the Jenkins
 
 <img width="990" alt="Screenshot 2023-02-01 at 11 14 13 AM" src="https://user-images.githubusercontent.com/43399466/215961440-3f13f82b-61a2-4117-88bc-0da265a67fa7.png">
 
+## Install Maven in Instance:
+    - sudo apt update
+    - sudo apt install maven
+
+Once Maven is installed, ensure that it is accessible from the Jenkins instance. You can verify this by running:
+
+    - mvn -version
+If Maven is correctly installed, it should show the version of Maven.
+
+Configure Maven in Jenkins: You need to configure Maven in Jenkins by following these steps:
+
+Go to Manage Jenkins > **Global Tool Configuration**.
+Under Maven section, click on Add Maven.
+Provide a name for Maven (e.g., "Maven 3").
+Choose Install Automatically (if you want Jenkins to install Maven itself).
+You can also specify the installation path if Maven is already installed manually on the Jenkins instance.
+
+Update the Jenkinsfile to Use the Configured Maven Tool: If you have configured Maven in Jenkins, you should refer to it explicitly in your Jenkinsfile. Here’s how you can update your Jenkinsfile to use the configured Maven tool:
+
+agent any
+
+    tools {
+        maven 'Maven 3'  // Use the configured Maven tool by name
+    }
+
+    stages {
+
 ## Install the Docker Pipeline plugin in Jenkins:
 
    - Log in to Jenkins.

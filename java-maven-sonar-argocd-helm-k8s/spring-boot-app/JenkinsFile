@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   tools {
-      maven 'Maven 3'  // Use the configured Maven tool by name
+      maven 'maven 3'  // Use the configured Maven tool by name
   }
   stages {
     stage('Checkout') {
